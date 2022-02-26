@@ -3,8 +3,8 @@ require 'active_record'
 module DB
 
 class Aggregation < ActiveRecord::Base
-  has_many :aggregations, as: :child
-  belongs_to :aggregation, as: :parent_id
+  has_many :childs, class_name: "Aggregation"
+  belongs_to :parent, class_name: "Aggregation"
   has_and_belongs_to_many :elements
 end
 
@@ -15,7 +15,6 @@ end
 
 class Tax < ActiveRecord::Base
   has_many :elements
-  has_many :aggregations
 end
 
 def self.establish_test_connection

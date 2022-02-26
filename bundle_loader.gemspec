@@ -10,10 +10,11 @@ Gem::Specification.new do |s|
       'https://github.com/madcato/bundle_loader'
     s.license       = 'MIT'
 
-    s.add_runtime_dependency "activesupport", "~> 5"
+    s.add_runtime_dependency "activerecord", "~> 5"
     s.add_runtime_dependency "json", "~> 2.6"
 
     s.add_development_dependency "minitest", "~> 5"
     s.add_development_dependency "rake", "~> 12.0"
     s.add_development_dependency "bundler", "~> 2.1.0"
+    s.add_development_dependency "sqlite3"
   end
