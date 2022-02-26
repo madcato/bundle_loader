@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'json'
 require 'bundle_loader'
+require 'db'
 
 class BundleLoaderTest < Minitest::Test
   def test_load_json_file
@@ -14,5 +15,11 @@ class BundleLoaderTest < Minitest::Test
     assert_equal 5, json["aggregations"].count
     assert_equal 15, json["elements"].count
     assert_equal 1, json["taxes"].count
+  end
+
+  def test_load_json_into_database
+    jsonFile = IO.read("./test/menu.json")
+    json = JSON.parse(jsonFile)
+    DB.initialize
   end
 end
