@@ -1,7 +1,5 @@
 require 'active_record'
 
-module DB
-
 class Aggregation < ActiveRecord::Base
   has_many :childs, class_name: "Aggregation"
   belongs_to :parent, class_name: "Aggregation"
@@ -16,6 +14,8 @@ end
 class Tax < ActiveRecord::Base
   has_many :elements
 end
+
+module DB
 
 def self.establish_test_connection
   ActiveRecord::Base.establish_connection(
@@ -39,8 +39,8 @@ class CreateAggregationsTable < ActiveRecord::Migration[5.2]
   def change
     create_table "aggregations", force: :cascade do |t|
       t.string "name"
-      t.integer "aggregation_id"
-      t.index ["aggregation_id"], name: "index_aggregations_on_aggregation_id"
+      t.integer "parent_id"
+      t.index ["parent_id"], name: "index_aggregations_on_aggregation_id"
     end
   end
 end

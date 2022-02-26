@@ -21,5 +21,6 @@ class BundleLoaderTest < Minitest::Test
     jsonFile = IO.read("./test/menu.json")
     json = JSON.parse(jsonFile)
     DB.initialize
+    BundleLoader.load(json)
   end
 end

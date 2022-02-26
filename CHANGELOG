@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Released]
 
-## [0.0.0] - 2021-04-25
+## [0.1.0] - 2022-02-26
+- Load json data to database. 
+- Link active_record associations: belongs_to, has_many, has_one and has_and_belongs_to_many.
+
+## [0.0.0] - 2022-02-26
 Inital commit
 ### Added
 ### Changed
