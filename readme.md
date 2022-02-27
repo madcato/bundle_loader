@@ -134,7 +134,7 @@ The root of the json object must be several pairs (name, arrays) with the main d
 
 ```json
 {
-  aggregations: [   ]
+  aggregations: [...]
 }
 ```
 
