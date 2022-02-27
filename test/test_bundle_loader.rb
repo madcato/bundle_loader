@@ -22,5 +22,8 @@ class BundleLoaderTest < Minitest::Test
     json = JSON.parse(jsonFile)
     DB.initialize
     BundleLoader.load(json)
+    assert_equal 5, Aggregation.count
+    assert_equal 15, Element.count
+    assert_equal 1, Tax.count
   end
 end
