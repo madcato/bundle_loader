@@ -134,18 +134,18 @@ The root of the json object must be several pairs (name, arrays) with the main d
 
 ```json
 {
-  aggregations: [...]
+  aggregations: [   ]
 }
 ```
 
-Then ser all the objects in the array, like:
+Then set all the objects in the array, like:
 
 ```json
 {
   aggregations: [{
     "id": 1,
     "name": "Complement",
-    "parent_id": null,
+    "parent_id": null
   }, {
     "id": 2,
     "name": "Fries",
