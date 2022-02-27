@@ -7,23 +7,23 @@ This gem allows to load json data into databases using Rails active_record.
 This gem loads a json like this one:
 ```json
 {
-	"aggregations": [{
-		"id": 1,
-		"name": "Drink",
-		"parent_id": null,
-		"elements": [1, 2]
-	}, ... ],
-	"elements": [{
-		"id": 1,
-		"name": "Ice water",
-		"price": "12.3",
-		"tax_id": null
-	}, ... ],
-	"taxes": [{
-		"id": 1,
-		"name": "vat",
-		"qty": 2.0
-	}]
+  "aggregations": [{
+    "id": 1,
+    "name": "Drink",
+    "parent_id": null,
+    "elements": [1, 2]
+  }, ... ],
+  "elements": [{
+    "id": 1,
+    "name": "Ice water",
+    "price": "12.3",
+    "tax_id": null
+  }, ... ],
+  "taxes": [{
+    "id": 1,
+    "name": "vat",
+    "qty": 2.0
+  }]
 }
 ```
 
@@ -134,7 +134,7 @@ The root of the json object must be several pairs (name, arrays) with the main d
 
 ```json
 {
-	aggregations: [...]
+  aggregations: [...]
 }
 ```
 
@@ -142,15 +142,15 @@ Then ser all the objects in the array, like:
 
 ```json
 {
-	aggregations: [{
-		"id": 1,
-		"name": "Complement",
-		"parent_id": null,
-	}, {
-		"id": 2,
-		"name": "Fries",
-		"parent_id": 1
-	}]
+  aggregations: [{
+    "id": 1,
+    "name": "Complement",
+    "parent_id": null,
+  }, {
+    "id": 2,
+    "name": "Fries",
+    "parent_id": 1
+  }]
 }
 ```
 
@@ -160,17 +160,17 @@ If you want to set `has_many` or `has_and_belongs_to_many` associations, you mus
 
 ```json
 {
-	"aggregations": [{
-		"id": 1,
-		"name": "Drink",
-		"parent_id": null,
-		"elements": [1, 2]
-	}, {
-		"id": 2,
-		"name": "Complement",
-		"parent_id": null,
-		"elements": [8, 9, 10]
-	}]
+  "aggregations": [{
+    "id": 1,
+    "name": "Drink",
+    "parent_id": null,
+    "elements": [1, 2]
+  }, {
+    "id": 2,
+    "name": "Complement",
+    "parent_id": null,
+    "elements": [8, 9, 10]
+  }]
 }
 ```
 
@@ -178,27 +178,27 @@ Then you can define more objects by adding other pairs to the root of the json o
 
 ```json
 {
-	"aggregations": [{
-		"id": 1,
-		"name": "Drink",
-		"parent_id": null,
-		"elements": [1, 2]
-	}, {
-		"id": 2,
-		"name": "Complement",
-		"parent_id": null,
-		"elements": [8, 9, 10]
-	}],
-	"elements": [{
-		"id": 1,
-		"name": "Ice water",
-		"price": "12.3",
-		"tax_id": null
-	}, {
-		"id": 2,
-		"name": "Water",
-		"price": "0.9",
-		"tax_id": null
-	}]
+  "aggregations": [{
+    "id": 1,
+    "name": "Drink",
+    "parent_id": null,
+    "elements": [1, 2]
+  }, {
+    "id": 2,
+    "name": "Complement",
+    "parent_id": null,
+    "elements": [8, 9, 10]
+  }],
+  "elements": [{
+    "id": 1,
+    "name": "Ice water",
+    "price": "12.3",
+    "tax_id": null
+  }, {
+    "id": 2,
+    "name": "Water",
+    "price": "0.9",
+    "tax_id": null
+  }]
 }
 ```
